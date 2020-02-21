@@ -17,8 +17,14 @@ $string = 'This kid seems pretty dumb';
 
 echo capThemAll($string);
 
+// function capThemAll($string)
+// {
+//     $strArray = explode(" ", $string);
+//     return implode(" ", array_map(function($strArray){return ucwords($strArray);}, $strArray));
+// }
+
 function capThemAll($string)
 {
-    $strArray = explode(" ", $string);
-    return implode(" ", array_map(function($strArray){return ucwords($strArray);}, $strArray));
+    //turns out ucwords can do arrays..
+    return ucwords($string);
 }
